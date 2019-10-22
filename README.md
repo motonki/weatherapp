@@ -34,9 +34,15 @@ Here are some things in different categories that you can do to make the app bet
 
 * Add **Dockerfile**'s in the *frontend* and the *backend* directories to run them virtually on any environment having [docker](https://www.docker.com/) installed. It should work by saying e.g. `docker build -t weatherapp_backend . && docker run --rm -i -p 9000:9000 --name weatherapp_backend -t weatherapp_backend`. If it doesn't, remember to check your api key first.
 
+Started googling *run node app in docker* and found [this](https://nodejs.org/de/docs/guides/nodejs-docker-webapp/) page. Followed isntructions and edited it to suit exercises requirements for backend. Edited little bit more to run also the frontend.
+
+Used Docker CLI [documentation](https://docs.docker.com/engine/reference/commandline/) to figure out how to close an docker process for which I closed terminal tab.
+
 * Add a **docker-compose.yml** -file connecting the frontend and the backend, enabling running the app in a connected set of containers.
 
 * The developers are still keen to run the app and its pipeline on their own computers. Share the development files for the container by using volumes, and make sure the containers are started with a command enabling hot reload.
+
+Wasn't quite sure what this means. I suppose that docker-compose now copies the source code to image but I should investigate why this is better than COPY command in Dockerfile (besides COPY . . being **very** bad).
 
 ### Node and React development
 
@@ -53,6 +59,8 @@ Here are some things in different categories that you can do to make the app bet
 *Test automation is key in developing good quality applications. Finding bugs in early stages of development is valuable in any software development project. With Robot Framework you can create integration tests that also serve as feature descriptions, making them exceptionally useful.*
 
 * Create automated tests for the application. (tip: [mocha](https://mochajs.org/))
+
+Used [this](https://dzone.com/articles/testing-nodejs-application-using-mocha-and-docker) as a guide to setup mocha tests.
 
 * Create [Robot Framework](http://robotframework.org/) integration tests. Hint: Start by creating a third container that gives expected weather data and direct the backend queries there by redefining the **MAP_ENDPOINT**.
 

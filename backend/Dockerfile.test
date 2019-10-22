@@ -1,0 +1,9 @@
+FROM weatherapp_backend
+
+COPY tests tests
+
+ENV NODE_ENV dev
+
+RUN npm install -g mocha
+
+CMD ["mocha", "tests/tests.js", "--reporter", "spec"]
