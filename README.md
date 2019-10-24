@@ -62,7 +62,11 @@ i think the bootstrap felxbox could have been solution to arrangin the data but 
 
 * There are [eslint](http://eslint.org/) errors. Sloppy coding it seems. Please help.
 
+Didn't have time for this one. There seemed to be commands for running eslint in the package.json. That would have been the starting point.
+
 * The app currently reports the weather only for location defined in the *backend*. Shouldn't it check the browser location and use that as the reference for making a forecast? (tip: [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation))
+
+Didn't have time for this one.
 
 ### Testing
 
