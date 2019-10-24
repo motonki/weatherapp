@@ -9,6 +9,10 @@ body{
 }
 
 .icon {
-  width: 30vw;
-  height: 30vw;
+  width: 5%;
+  height: 5%;
+}
+
+.main-frame{
+  font-size: 20pt;
 }

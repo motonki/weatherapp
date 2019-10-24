@@ -1,23 +1,16 @@
 version: '3.7'
 
-volumes:
-  data:
 services:
   backend:
-    image: weatherapp_backend:latest
-    volumes:
-      - type: volume
-        source: weatherapp
-        target: /data
-        volume:
-          nocopy: true
+    build: ./backend
+    command: node ./src/index.js
+    #volumes:
+    #  - ./backend:/usr/src/backend 
     ports: 
       - "9000:9000"
   frontend:
-    image: weatherapp_frontend:latest
+    build: ./frontend
     ports: 
       - "8000:8000"
     depends_on: 
       - backend
-volumes:
-  weatherapp:
